@@ -1,0 +1,68 @@
+Esta aplicación web es una PWA
+/my-pwa
+│
+├── / backend
+|   ├── / instance
+|   |   └── mydatabase.db
+|   ├── app.py
+|   └── requeriments.txt
+├── /public
+|   ├── / icons
+|   ├── / img
+|   ├── / styles
+│   ├── index.html
+│   ├── manifest.json
+│   ├── app.js
+|   └── serivice-worker.js
+│
+├── /src
+│   ├── /components
+│   ├── /pages
+│   ├── /styles
+│   ├── /assets
+│   └── app.js
+│
+│
+└── /tests
+
+1. /public
+index.html: El archivo HTML principal de tu aplicación. 
+Aquí es donde se carga la aplicación y se incluye cualquier script necesario.
+
+manifest.json: Contiene la configuración de la PWA, 
+como el nombre de la aplicación, la descripción, 
+los iconos, los colores de tema, y la pantalla de inicio.
+
+/icons: Carpeta que almacena los iconos de tu PWA 
+en diferentes tamaños y resoluciones. 
+Estos se usan para mostrar el ícono de la aplicación
+en la pantalla de inicio y en otras ubicaciones.
+
+
+2. /src
+/components: Componentes reutilizables de la aplicación. 
+Aquí puedes colocar archivos de componentes individuales 
+que se usan en varias partes de la aplicación, como botones, tarjetas, formularios, etc.
+
+/pages: Archivos que representan las diferentes páginas o vistas de tu aplicación. 
+Cada archivo puede corresponder a una página específica, como inicio, perfil, o configuración.
+
+/styles: Archivos CSS o preprocesadores (como Sass o LESS) que definen los estilos de tu aplicación. 
+Puedes organizarlo por archivos específicos o utilizar un solo archivo principal.
+
+/assets: Recursos estáticos como imágenes, fuentes, y otros archivos que necesitas para la aplicación.
+app.js: Archivo principal donde se inicializa la aplicación, se manejan las rutas, y se integran los componentes y el estado.
+
+3. /service-worker
+service-worker.js: Archivo del service worker que controla el caching, 
+las solicitudes de red, y la funcionalidad offline. 
+Aquí defines cómo tu PWA maneja las peticiones y el almacenamiento en caché.
+
+
+4. /tests
+Carpeta destinada a pruebas unitarias y de integración. 
+Aquí puedes incluir archivos para pruebas de componentes individuales y 
+para pruebas de la funcionalidad general de la aplicación. 
+Puedes usar herramientas como Jest o Mocha para las pruebas.
+
+DataBases:lorem01

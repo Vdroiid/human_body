@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="icon" href="../../public/icons/icon-144x144.png" type="image/png">
+    <link rel="stylesheet" href="../../public/styles/index.css">
+    <link rel="stylesheet" href="../assets/styles/formularios.css">
+</head>
+<body>
+    <header class="encabezado">
+        <a href="../../public/"><h1>Human Body</h1></a>
+        <nav>
+            <ul class="menu">
+                <li><a href="../../src/pages/definiciones.html">Definiciones</a></li>
+                <li><a href="../../src/pages/practica.html">Práctica</a></li>
+                <li class="active"><a href="../../src/pages/registro.html">Registro</a></li>
+            </ul>
+        </nav>        
+    </header>
+    <main class="main-registro">
+        <form class="registro-form" id="registro">
+            <h2>Registro</h2>
+            <div class="campo">
+                <label for="username" class="label">Nombre de usuario:</label>
+                <input type="text" id="username" name="username" class="input" required>
+            </div>
+            <div class="campo">
+                <label for="email" class="label">Correo electrónico:</label>
+                <input type="email" id="email" name="email" class="input" required>
+            </div>
+            <div class="campo">
+                <label for="password" class="label">Contraseña:</label>
+                <input type="password" id="password" name="password" class="input" required>
+            </div>
+            <div class="campo">
+                <label for="confirm-password" class="label">Confirmar contraseña:</label>
+                <input type="password" id="confirm-password" name="confirm-password" class="input" required>
+            </div>
+            <div class="campo">
+                <button type="submit" class="btn">Registrarse</button>
+            </div>
+            <div class="campo">
+                <p>¿Ya tienes una cuenta?, <a href="./login.html">inicia sesión aquí</a></p>
+            </div>
+        </form>
+    </main>
+    <footer id="pie-pagina">
+        <p>&copy; 2024 Santos</p>
+        <div class="datos" id="datos"></div>
+        <h1>Human Body</h1>
+        <p><a href="#">Política de privacidad</a> | <a href="#">Términos de servicio</a></p>
+    </footer>
+    <script type="module" src="../app.js"></script>
+</body>
+</html>

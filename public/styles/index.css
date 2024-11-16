@@ -1,0 +1,179 @@
+:root {
+    --color-primario:  #f7c395;
+    --color-secundario:#cb5540;
+    --color-blanco: #ffffff;
+    --color-terciario: #f7c395c5;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: var(--color-blanco);
+    width: 100%;
+    height: 100%;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+    color: var(--color-secundario);
+}
+
+.encabezado {
+    background-color: var(--color-primario);
+    padding: 1vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: fixed;
+    top: 1em;
+    left: auto;
+    right: auto;
+    z-index: 1;
+    border-radius: 2em;
+    color: var(--color-blanco);
+    border: 2px solid var(--color-terciario);
+    width:fit-content;
+}
+.menu li.active a {
+    font-weight: bold; /* Ejemplo: texto en negrita */
+    color: var(--color-secundario);
+    text-decoration: underline; /* Ejemplo: subrayado */
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-letras);
+}
+a:hover {
+    color: var(--color-secundario);
+}
+button {
+    width:auto;
+    height: 3em;
+    background-color: transparent;
+    border: 1px solid var(--color-secundario);
+    border-radius: 5em;
+    color: var(--color-secundario);
+}
+button:hover {
+    cursor: pointer;
+    background-color: var(--color-secundario);
+    color: var(--color-blanco);
+}
+
+.menu li {
+    display:inline;
+    margin-right: 20px;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    padding-top: 16vh;
+    width: 100%;
+}
+/*-------------------------- Configuraciones de la página principal*/
+.imagen {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    max-width: 100%;
+    background-image: url(../img/human_body.png);
+    background-size: cover;
+    background-position: center;
+    height: 130vh;
+    position: relative;
+}
+
+.imagen img {
+    max-width: 100%;
+}
+
+.opciones {
+    padding: 1vh;
+    width: 15%;
+    border: 2px solid var(--color-terciario);
+    border-radius: 5px;
+}
+
+.opciones div {
+    margin-top: 1em;
+}
+/* Estilos de cada div */
+.destino-craneo,
+.destino-cabeza,
+.destino-hombro,
+.destino-humero,
+.destino-pecho,
+.destino-mano,
+.destino-costilla,
+.destino-abdomen,
+.destino-pelvis,
+.destino-muslo,
+.destino-femur,
+.destino-rodilla,
+.destino-rotula,
+.destino-pie {
+    background-color: var(--color-primario);
+    padding: 1vh;
+    border: 1px solid var(--color-secundario);
+    border-radius: 1em;
+    color:var(--color-blanco);
+}
+
+/* Estilos específicos de cada div*/
+.destino-craneo { position: absolute; top: 4%; left: 56%; width: fit-content; }
+.destino-cabeza{ position: absolute; top: 4%; left: 36%; width: fit-content; }
+.destino-hombro{ position: absolute; top: 15%; left: 30%; width: fit-content; }
+.destino-humero{ position: absolute; top: 14%; left: 57%; width: fit-content; }
+.destino-pecho{ position: absolute; top: 27%; left: 36%; width: fit-content; }
+.destino-mano{ position: absolute; top: 32%; left: 18%; width: fit-content; }
+.destino-costilla{ position: absolute; top: 29%; left: 72%; width: fit-content; }
+.destino-abdomen{ position: absolute; top: 39%; left: 36%; width: fit-content; }
+.destino-pelvis{ position: absolute; top: 42%; left: 72%; width: fit-content; }
+.destino-muslo{ position: absolute; top: 54%; left: 24%; width: fit-content; }
+.destino-femur{ position: absolute; top: 56%; left: 73%; width: fit-content; }
+.destino-rodilla{ position: absolute; top: 69%; left: 34%; width: fit-content; }
+.destino-rotula{ position: absolute; top: 69%; left: 74%; width: fit-content; }
+.destino-pie { position: absolute; top: 96%; left: 25%; width: fit-content; }
+/*-------------------------- Fin de las Configuraciones de la página principal*/
+
+footer {
+    color: var(--color-blanco);
+    background-color: var(--color-primario);
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 2em;
+}
+
+/* Ventana antes de iniciar actividad */
+.modal {
+    display: block;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #cb55407e;
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: var(--color-primario);
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid var(--color-secundario);
+    width: 300px;
+    text-align: center;
+    border-radius: 1em;
+}
+
+/* Tiempo transcurrido */
+.tiempo-transcurido {
+    color: var(--color-secundario);
+    position: relative;
+    left: 1em;
+}

@@ -1,0 +1,67 @@
+[
+    {
+        "title": "Cráneo",
+        "image": "../../public/img/craneo.jpg",
+        "definition": "Estructura ósea que forma la parte superior y posterior de la cabeza, protegiendo el cerebro y dando forma a la cara."
+    },
+    {
+        "title": "Cabeza",
+        "image": "../../public/img/cabeza.jpg",
+        "definition": "Parte del cuerpo humano que contiene el cerebro, los ojos, los oídos, la nariz y la boca, y es responsable de la percepción sensorial y la expresión facial."
+    },
+    {
+        "title": "Húmero",
+        "image": "../../public/img/humero.jpg",
+        "definition": "Hueso largo del brazo que se extiende desde el codo hasta el hombro, formando parte del esqueleto superior."
+    },
+    {
+        "title": "Pecho",
+        "image": "../../public/img/pecho.jpg",
+        "definition": "Área del cuerpo entre el cuello y el abdomen, que contiene los pulmones y el corazón, protegidos por las costillas."
+    },
+    {
+        "title": "Mano",
+        "image": "../../public/img/mano.jpg",
+        "definition": "Extremidad terminal del brazo que permite la manipulación de objetos. Está compuesta por múltiples huesos y articulaciones, incluyendo dedos."
+    },
+    {
+        "title": "Costilla",
+        "image": "../../public/img/costilla.jpg",
+        "definition": "Hueso curvo que forma parte de la caja torácica, protegiendo los órganos internos y ayudando en la respiración."
+    },
+    {
+        "title": "Abdomen",
+        "image": "../../public/img/abdomen.jpg",
+        "definition": "Parte del tronco que se encuentra entre el pecho y la pelvis, que alberga órganos digestivos como el estómago y los intestinos."
+    },
+    {
+        "title": "Pelvis",
+        "image": "../../public/img/pelvis.png",
+        "definition": "Estructura ósea que conecta la columna vertebral con las extremidades inferiores, proporcionando soporte a los órganos internos y permitiendo la locomoción."
+    },
+    {
+        "title": "Muslo",
+        "image": "../../public/img/muslo.jpg",
+        "definition": "Parte del cuerpo situada entre la cadera y la rodilla, que contiene el fémur, el hueso más largo del cuerpo."
+    },
+    {
+        "title": "Fémur",
+        "image": "../../public/img/femur.jpg",
+        "definition": "Hueso largo del muslo que se extiende desde la cadera hasta la rodilla, soportando el peso del cuerpo."
+    },
+    {
+        "title": "Rorilla",
+        "image": "../../public/img/rodilla.jpg",
+        "definition": "Articulación que conecta el muslo con la parte inferior de la pierna, permitiendo el movimiento de flexión y extensión."
+    },
+    {
+        "title": "Rótula",
+        "image": "../../public/img/rotula.jpg",
+        "definition": "Hueso pequeño y triangular que se encuentra en la parte frontal de la rodilla, protegiendo la articulación y facilitando el movimiento."
+    },
+    {
+        "title": "Pie",
+        "image": "../../public/img/pie.png",
+        "definition": "Extremidad inferior del cuerpo que soporta el peso y permite la locomoción, compuesto por múltiples huesos, ligamentos y músculos."
+    }
+]

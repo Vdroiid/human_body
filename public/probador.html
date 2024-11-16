@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Tiempo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        button {
+            margin-right: 10px;
+        }
+        #tiemposGuardados {
+            margin-top: 20px;
+        }
+        #contador {
+            margin-top: 20px;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="iniciarActividad()">Iniciar Actividad</button>
+    <button onclick="completarActividad()">Completar Actividad</button>
+    
+    <div id="contador">Tiempo: 0 segundos</div>
+    <div id="tiemposGuardados"></div>
+
+    <script>
+        let db;
+        let inicio;
+        let fin;
+        let intervalo;
+        let tiempoTranscurrido = 0;
+
+        const request = indexedDB.open('actividadDB', 1);
+
+        request.onupgradeneeded = (event) => {
+            db = event.target.result;
+            const objectStore = db.createObjectStore('tiempos', { keyPath: 'id', autoIncrement: true });
+            objectStore.createIndex('duracion', 'duracion', { unique: false });
+        };
+
+        request.onsuccess = (event) => {
+            db = event.target.result;
+        };
+
+        request.onerror = (event) => {
+            console.error('Error al abrir la base de datos:', event.target.errorCode);
+        };
+
+        function iniciarActividad() {
+            inicio = Date.now();
+            tiempoTranscurrido = 0;
+            document.getElementById('contador').textContent = "Tiempo: 0 segundos";
+            document.getElementById('tiemposGuardados').innerHTML = ''; // Resetear la visualización
+            intervalo = setInterval(actualizarContador, 1000);
+        }
+
+        function completarActividad() {
+            fin = Date.now();
+            clearInterval(intervalo); // Detener el contador
+            const duracion = fin - inicio; // Tiempo en milisegundos
+            guardarTiempo(duracion);
+            alert(`Actividad completada en ${duracion / 1000} segundos`);
+        }
+
+        function actualizarContador() {
+            tiempoTranscurrido += 1; // Incrementa el tiempo transcurrido en segundos
+            document.getElementById('contador').textContent = `Tiempo: ${tiempoTranscurrido} segundos`;
+        }
+
+        function guardarTiempo(duracion) {
+            const transaction = db.transaction(['tiempos'], 'readwrite');
+            const objectStore = transaction.objectStore('tiempos');
+            const registro = { duracion: duracion };
+
+            const request = objectStore.add(registro);
+
+            request.onsuccess = () => {
+                console.log('Tiempo guardado:', duracion);
+                mostrarTiempoReciente(duracion); // Mostrar solo el tiempo más reciente
+            };
+
+            request.onerror = (event) => {
+                console.error('Error al guardar el tiempo:', event.target.errorCode);
+            };
+        }
+
+        function mostrarTiempoReciente(duracion) {
+            const tiemposDiv = document.getElementById('tiemposGuardados');
+            tiemposDiv.innerHTML = '<h3>Último Tiempo Guardado:</h3>'; // Resetear y mostrar solo el último tiempo
+            tiemposDiv.innerHTML += `<p>Duración: ${duracion / 1000} segundos</p>`;
+        }
+    </script>
+</body>
+</html>

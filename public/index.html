@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrastrar y Soltar Cuerpo Humano</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="./icons/icon-144x144.png" type="image/png">
+    <link rel="stylesheet" href="./styles/index.css">
+</head>
+<body>
+    <header class="encabezado">
+        <h1>Human Body</h1>
+        <nav>
+            <ul class="menu">
+                <li><a href="../src/pages/definiciones.html">Definiciones</a></li>
+                <li><a href="../src/pages/practica.html">Práctica</a></li>
+                <li><a href="../src/pages/registro.html">Registro</a></li>
+            </ul>
+        </nav>
+        <div id="tiempo">Tiempo: 0 segundos</div>
+    </header>
+    <!--Ventana flotante antes de inciar test-->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <h3>Selecciona una opción</h3>
+            <button id="ver-definiciones">Ver definiciones</button>
+            <button id="practicas">Practicar</button>
+            <button id="resolver-test" onclick="iniciarActividad()">Resolver test</button>
+        </div>
+    </div>
+
+    <main class="main" id="main">
+        <div class="tiempo-transcurido" id="tiemposGuardados"></div> <!-- Contenedor para mostrar el último tiempo guardado -->
+        <section class="imagen" id="imagen">
+            <!--1-->
+            <div class="destino-craneo" id="destino-craneo">Arrastrar aquí</div>
+            <!--2-->
+            <div class="destino-cabeza" id="destino-cabeza">Arrastrar aquí</div>
+            <!--3-->
+            <div class="destino-hombro" id="destino-hombro">Arrastrar aquí</div>
+            <!--4-->
+            <div class="destino-humero" id="destino-humero">Arrastrar aquí</div>
+            <!--5-->
+            <div class="destino-pecho" id="destino-pecho">Arrastrar aquí</div>
+            <!--6-->
+            <div class="destino-mano" id="destino-mano">Arrastrar aquí</div>
+            <!--7-->
+            <div class="destino-costilla" id="destino-costilla">Arrastrar aquí</div>
+            <!--8-->
+            <div class="destino-abdomen" id="destino-abdomen">Arrastrar aquí</div>
+            <!--9-->
+            <div class="destino-pelvis" id="destino-pelvis">Arrastrar aquí</div>
+            <!--10-->
+            <div class="destino-muslo" id="destino-muslo">Arrastrar aquí</div>
+            <!--11-->
+            <div class="destino-femur" id="destino-femur">Arrastrar aquí</div>
+            <!--12-->
+            <div class="destino-rodilla" id="destino-rodilla">Arrastrar aquí</div>
+            <!--13-->
+            <div class="destino-rotula" id="destino-rotula">Arrastrar aquí</div>
+            <!--14-->
+            <div class="destino-pie" id="destino-pie">Arrastrar aquí</div>
+        </section>
+
+
+        <section class="opciones" id="opciones">
+            <h2>Arrastra donde corresponde</h2>
+            <!--draggable="true" hace que el div sea arrastrable.-->
+            <div class="craneo" id="craneo" draggable="true">Cráneo</div>
+            <div class="cabeza" id="cabeza" draggable="true">Cabeza</div>
+            <!--3-->
+            <div class="hombro" id="hombro" draggable="true">Hombro</div>
+            <!--4-->
+            <div class="humero" id="humero" draggable="true">Húmero</div>
+            <!--5-->
+            <div class="pecho" id="pecho" draggable="true">Pecho</div>
+            <!--6-->
+            <div class="mano" id="mano" draggable="true">Mano</div>
+            <!--7-->
+            <div class="costilla" id="costilla" draggable="true">Costilla</div>
+            <!--8-->
+            <div class="abdomen" id="abdomen" draggable="true">Abdomen</div>
+            <!--9-->
+            <div class="pelvis" id="pelvis" draggable="true">Pelvis</div>
+            <!--10-->
+            <div class="muslo" id="muslo" draggable="true">Muslo</div>
+            <!--11-->
+            <div class="femur" id="femur" draggable="true">Férmur</div>
+            <!--12-->
+            <div class="rodilla" id="rodilla" draggable="true">Rodilla</div>
+            <!--13-->
+            <div class="rotula" id="rotula" draggable="true">Rótula</div>
+            <!--14-->
+            <div class="pie" id="pie" draggable="true">Pie</div>
+        </section>
+    </main>
+    
+    <footer id="pie-pagina">
+        <p>&copy; 2024 Santos</p>
+        <h1>Human Body</h1>
+        <p><a href="#">Política de privacidad</a> | <a href="#">Términos de servicio</a></p>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
