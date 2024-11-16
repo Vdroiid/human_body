@@ -1,35 +1,35 @@
 # **Human_Body - PWA Educativa para Aprender las Partes del Cuerpo Humano**
 
-**Human_Body** es una **aplicación web progresiva (PWA)** diseñada para enseñar y poner a prueba el conocimiento sobre las partes del cuerpo humano de una manera divertida e interactiva. En esta aplicación, los usuarios deben arrastrar y soltar palabras (nombres de partes del cuerpo) en las ubicaciones correctas en una imagen del cuerpo humano.
+**Human_Body** es una **aplicación web progresiva (PWA)** diseñada para enseñar las partes del cuerpo humano de manera divertida e interactiva. Los usuarios deben arrastrar y soltar palabras (nombres de partes del cuerpo) a las ubicaciones correctas en una imagen del cuerpo humano. Si la palabra está correctamente ubicada, se felicita al usuario; si no, la palabra vuelve a su lugar.
 
-Si el usuario coloca correctamente una palabra, recibe una felicitación; si no, la palabra vuelve a su lugar. La aplicación también lleva un contador de tiempo para medir cuánto tardas en completar el desafío, y al final te muestra el tiempo total que has invertido en resolver el ejercicio.
+### **Características principales**
 
-Además, esta PWA se conecta a un **backend en Flask** que simula una API que maneja la base de datos y registra el tiempo de interacción.
+- **Arrastrar y soltar**: Los usuarios arrastran palabras con los nombres de las partes del cuerpo humano y las colocan en la ubicación correcta de la imagen.
+- **Contador de tiempo**: La aplicación mide el tiempo que tardas en completar el ejercicio y lo muestra al final.
+- **Login con Flask**: El sistema de **login** está gestionado con un backend en Flask, donde los usuarios pueden autenticarse para guardar su progreso (falta el guardado de tiempo).
+- **Almacenamiento local con IndexedDB**: El tiempo del usuario y otras interacciones se guardan localmente usando **IndexedDB**, lo que permite mantener el progreso incluso cuando el usuario está offline.
+- **Instalación como PWA**: Puedes instalar la aplicación como una app nativa en tu dispositivo móvil o de escritorio.
+- **Feedback interactivo**: El sistema felicita al usuario cuando coloca una palabra correctamente y vuelve a colocarla si es incorrecta.
 
-## **Características principales**
-
-- **Arrastrar y soltar**: Interactúa con la imagen del cuerpo humano arrastrando los nombres de las partes del cuerpo hacia las ubicaciones correctas.
-- **Contador de tiempo**: Registra el tiempo que tomas en completar el ejercicio y lo muestra al final.
-- **API en Flask**: Conecta con un backend simulado para gestionar el tiempo del usuario y almacenar las interacciones.
-- **Feedback interactivo**: Te felicita cuando colocas una palabra correctamente y te devuelve la palabra a su lugar si no es correcta.
-- **Instalación como PWA**: Puedes instalar la aplicación en tu dispositivo móvil o de escritorio como una aplicación nativa.
+---
 
 ## **Cómo funciona**
 
-1. **Arrastra y suelta**: Aparecen palabras con los nombres de las partes del cuerpo humano, y debes arrastrarlas a las ubicaciones correctas en la imagen del cuerpo humano.
-2. **Felicitaciones**: Si colocas una palabra correctamente, el sistema te felicita.
-3. **Tiempo de interacción**: El sistema mantiene un contador de tiempo, que te muestra al final para saber cuánto tardaste en completar el desafío.
-4. **Flask API**: La aplicación se conecta a un backend desarrollado con **Flask** para simular la interacción con una base de datos, registrando los tiempos de los usuarios y otras métricas.
+1. **Login con Flask**: Los usuarios se autentican usando Flask para gestionar el acceso a la aplicación.
+2. **Arrastra y suelta**: Las palabras de las partes del cuerpo deben arrastrarse a las ubicaciones correctas en la imagen. Si la respuesta es correcta, el sistema felicita al usuario.
+3. **Contador de tiempo**: La aplicación mide el tiempo que toma cada usuario para completar el juego y lo guarda localmente en el navegador.
+4. **Almacenamiento en IndexedDB**: Los datos del tiempo y progreso se guardan en **IndexedDB**, lo que significa que la información persistirá incluso cuando el usuario cierre el navegador o se quede offline.
+5. **API de Flask**: Flask maneja la autenticación de los usuarios, permitiendo a los jugadores crear una cuenta y registrar su tiempo de juego a través de una conexión backend.
 
 ---
 
 ## **Tecnologías utilizadas**
 
 - **PWA (Progressive Web App)**: La aplicación puede ser instalada como una app nativa en dispositivos móviles y de escritorio.
-- **Flask**: Un micro-framework para Python que simula una API y maneja la lógica de backend.
-- **HTML5 / CSS3 / JavaScript**: La estructura básica de la interfaz de usuario y la funcionalidad interactiva.
-- **Web Storage API**: Para guardar el progreso del usuario y otras configuraciones locales.
-- **Drag and Drop API**: Para permitir la funcionalidad de arrastrar y soltar en la interfaz.
+- **Flask**: Framework de Python utilizado para gestionar el login de usuarios y la autenticación.
+- **IndexedDB**: Base de datos local del navegador para almacenar el tiempo y el progreso del usuario.
+- **HTML5 / CSS3 / JavaScript**: La estructura básica de la interfaz de usuario y la lógica interactiva.
+- **Drag and Drop API**: Permite la funcionalidad de arrastrar y soltar las palabras en la interfaz.
 
 ---
 
@@ -37,7 +37,7 @@ Además, esta PWA se conecta a un **backend en Flask** que simula una API que ma
 
 ### **1. Clonar el repositorio:**
 
-Para comenzar con el proyecto, clona este repositorio a tu máquina local:
+Primero, clona el repositorio a tu máquina local:
 
 ```bash
 git clone https://github.com/tu-usuario/human_body.git
